@@ -14,10 +14,7 @@ export default {
   iAcceptTheLicenseAndTerms: 'אני מקבל את תנאי השימוש',
   youNeedToAcceptTheLicenseAndTermsFirst: 'תחילה עלייך לקבל את הרשיון ותנאי השימוש',
   submitted: 'נשלח',
-  docs: 'תיעוד',
+  framework: 'פריימוורק',
   github: 'גיטהאב',
-  discordChatChannel: 'ערוץ צט דיסקורד',
-  forum: 'פורום',
-  twitter: 'טוויטר',
-  facebook: 'פייסבוק'
+  demoSite: 'אתר הדגמה'
 }

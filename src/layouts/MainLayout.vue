@@ -70,40 +70,22 @@ export default {
     essentialLinks () {
       return [
         {
-          title: this.$t('docs'),
+          title: this.$t('framework'),
           caption: 'quasar.dev',
           icon: 'school',
           link: 'https://quasar.dev'
         },
         {
           title: this.$t('github'),
-          caption: 'github.com/quasarframework',
+          caption: 'tomers/quasar-i18n-example',
           icon: 'code',
-          link: 'https://github.com/quasarframework'
+          link: 'https://github.com/tomers/quasar-i18n-example'
         },
         {
-          title: this.$t('discordChatChannel'),
-          caption: 'chat.quasar.dev',
+          title: this.$t('demoSite'),
+          caption: 'http://quasar-i18.surge.sh',
           icon: 'chat',
-          link: 'https://chat.quasar.dev'
-        },
-        {
-          title: this.$t('forum'),
-          caption: 'forum.quasar.dev',
-          icon: 'record_voice_over',
-          link: 'https://forum.quasar.dev'
-        },
-        {
-          title: this.$t('twitter'),
-          caption: '@quasarframework',
-          icon: 'rss_feed',
-          link: 'https://twitter.quasar.dev'
-        },
-        {
-          title: this.$t('facebook'),
-          caption: '@QuasarFramework',
-          icon: 'public',
-          link: 'https://facebook.quasar.dev'
+          link: 'http://quasar-i18.surge.sh/'
         }
       ]
     }

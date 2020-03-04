@@ -14,10 +14,7 @@ export default {
   iAcceptTheLicenseAndTerms: 'I accept the license and terms',
   youNeedToAcceptTheLicenseAndTermsFirst: 'You need to accept the license and terms first',
   submitted: 'Submitted',
-  docs: 'Docs',
+  framework: 'Framework',
   github: 'Github',
-  discordChatChannel: 'Discord Chat Channel',
-  forum: 'Forum',
-  twitter: 'Twitter',
-  facebook: 'Facebook'
+  demoSite: 'Demo Site'
 }
