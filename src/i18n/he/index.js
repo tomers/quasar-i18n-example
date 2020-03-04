@@ -13,6 +13,7 @@ export default {
   pleaseTypeARealAge: 'אנא הקלד גיל אמיתי',
   iAcceptTheLicenseAndTerms: 'אני מקבל את תנאי השימוש',
   youNeedToAcceptTheLicenseAndTermsFirst: 'תחילה עלייך לקבל את הרשיון ותנאי השימוש',
+  submitted: 'נשלח',
   docs: 'תיעוד',
   github: 'גיטהאב',
   discordChatChannel: 'ערוץ צט דיסקורד',

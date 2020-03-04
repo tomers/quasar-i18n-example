@@ -13,6 +13,7 @@ export default {
   pleaseTypeARealAge: 'Please type a real age',
   iAcceptTheLicenseAndTerms: 'I accept the license and terms',
   youNeedToAcceptTheLicenseAndTermsFirst: 'You need to accept the license and terms first',
+  submitted: 'Submitted',
   docs: 'Docs',
   github: 'Github',
   discordChatChannel: 'Discord Chat Channel',
