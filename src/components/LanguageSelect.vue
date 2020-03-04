@@ -3,7 +3,8 @@
     v-if="isShown"
     v-model="lang"
     :options="langOptions"
-    bg-color="grey"
+    :options-dark="$q.dark.isActive"
+    dark
     aria-label="Language"
     emit-value
     map-options
