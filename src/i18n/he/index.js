@@ -7,7 +7,7 @@ export default {
   essentialLinks: 'לינקים חיוניים',
   'yourName*': 'שמך *',
   nameAndSurname: 'שם פרטי ושם משפחה',
-  pleseTypeSomething: 'הקלד ערך כלשהו',
+  pleaseTypeSomething: 'הקלד ערך כלשהו',
   'yourAge*': 'גילך *',
   pleaseTypeYourAge: 'הקלד את גילך',
   pleaseTypeARealAge: 'אנא הקלד גיל אמיתי',

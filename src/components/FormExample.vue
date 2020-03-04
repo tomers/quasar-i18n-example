@@ -10,7 +10,7 @@
       :hint="$t('nameAndSurname')"
       filled
       lazy-rules
-      :rules="[ val => val && val.length > 0 || $t('pleseTypeSomething')]"
+      :rules="[ val => val && val.length > 0 || $t('pleaseTypeSomething')]"
     />
 
     <q-input

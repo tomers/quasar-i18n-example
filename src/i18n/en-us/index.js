@@ -7,7 +7,7 @@ export default {
   essentialLinks: 'Essential Links',
   'yourName*': 'Your name *',
   nameAndSurname: 'Name and surname',
-  pleseTypeSomething: 'Please type something',
+  pleaseTypeSomething: 'Please type something',
   'yourAge*': 'Your age *',
   pleaseTypeYourAge: 'Please type your age',
   pleaseTypeARealAge: 'Please type a real age',
