@@ -1,5 +1,6 @@
 <template>
   <q-select
+    v-if="lang"
     v-model="lang"
     :options="langOptions"
     bg-color="grey"
@@ -27,9 +28,7 @@ if (availableLangs) {
 export default {
   data () {
     return {
-      // set lang according to quasar's framework.lang variable, as configured
-      // in quasar.conf.js
-      lang: this.$q.lang.isoName,
+      lang: null,
       langOptions: []
     }
   },
@@ -46,6 +45,18 @@ export default {
     }
   },
   created () {
+    // set language according to quasar's framework.lang variable, as configured
+    // in quasar.conf.js
+    const frameworkLang = this.$q.lang.isoName
+
+    if (!appLanguages.map(lang => lang.isoName).includes(frameworkLang)) {
+      // do not use this component when framework's language is not in the list
+      // of available languages
+      return
+    }
+    this.lang = frameworkLang
+
+    // populate language selector
     this.langOptions = appLanguages.map(lang => ({
       label: lang.nativeName, value: lang.isoName
     }))
