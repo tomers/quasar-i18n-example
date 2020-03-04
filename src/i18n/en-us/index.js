@@ -2,6 +2,21 @@
 // so you can safely delete all default props below
 
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
+  quasar: 'Quasar',
+  quasarApp: 'Quasar App',
+  essentialLinks: 'Essential Links',
+  'yourName*': 'Your name *',
+  nameAndSurname: 'Name and surname',
+  pleseTypeSomething: 'Please type something',
+  'yourAge*': 'Your age *',
+  pleaseTypeYourAge: 'Please type your age',
+  pleaseTypeARealAge: 'Please type a real age',
+  iAcceptTheLicenseAndTerms: 'I accept the license and terms',
+  youNeedToAcceptTheLicenseAndTermsFirst: 'You need to accept the license and terms first',
+  docs: 'Docs',
+  github: 'Github',
+  discordChatChannel: 'Discord Chat Channel',
+  forum: 'Forum',
+  twitter: 'Twitter',
+  facebook: 'Facebook'
 }

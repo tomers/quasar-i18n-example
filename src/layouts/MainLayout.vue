@@ -12,10 +12,13 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          {{ $t('quasarApp') }}
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <language-select />
+        <div class="q-ml-md">
+          {{ $t('quasar') }} v{{ $q.version }}
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -30,7 +33,7 @@
           header
           class="text-grey-8"
         >
-          Essential Links
+          {{ $t('essentialLinks') }}
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
@@ -48,50 +51,56 @@
 
 <script>
 import EssentialLink from 'components/EssentialLink'
+import LanguageSelect from 'components/LanguageSelect'
 
 export default {
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    EssentialLink,
+    LanguageSelect
   },
 
   data () {
     return {
-      leftDrawerOpen: false,
-      essentialLinks: [
+      leftDrawerOpen: false
+    }
+  },
+  computed: {
+    essentialLinks () {
+      return [
         {
-          title: 'Docs',
+          title: this.$t('docs'),
           caption: 'quasar.dev',
           icon: 'school',
           link: 'https://quasar.dev'
         },
         {
-          title: 'Github',
+          title: this.$t('github'),
           caption: 'github.com/quasarframework',
           icon: 'code',
           link: 'https://github.com/quasarframework'
         },
         {
-          title: 'Discord Chat Channel',
+          title: this.$t('discordChatChannel'),
           caption: 'chat.quasar.dev',
           icon: 'chat',
           link: 'https://chat.quasar.dev'
         },
         {
-          title: 'Forum',
+          title: this.$t('forum'),
           caption: 'forum.quasar.dev',
           icon: 'record_voice_over',
           link: 'https://forum.quasar.dev'
         },
         {
-          title: 'Twitter',
+          title: this.$t('twitter'),
           caption: '@quasarframework',
           icon: 'rss_feed',
           link: 'https://twitter.quasar.dev'
         },
         {
-          title: 'Facebook',
+          title: this.$t('facebook'),
           caption: '@QuasarFramework',
           icon: 'public',
           link: 'https://facebook.quasar.dev'
