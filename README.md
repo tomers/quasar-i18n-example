@@ -2,6 +2,9 @@
 
 A sample Quasar Framework app for i18n demonstration
 
+## Demo
+[Demo app](http://quasar-i18.surge.sh/)
+
 ## Install the dependencies
 ```bash
 yarn
