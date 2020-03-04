@@ -35,12 +35,11 @@ export default {
     }
   },
   computed: {
-    isLangInAppLangs () {
-      return appLanguages && this.lang &&
-        appLanguages.map(lang => lang.isoName).includes(this.lang)
+    appLanguageNames () {
+      return appLanguages && appLanguages.map(lang => lang.isoName)
     },
     isShown () {
-      return this.isLangInAppLangs
+      return this.isLangSupported(this.lang)
     }
   },
   watch: {
@@ -68,18 +67,27 @@ export default {
     if (!appLanguages) {
       return
     }
-
-    // set language according to quasar's framework.lang variable, as configured
-    // in quasar.conf.js
-    const savedLang = this.$q.cookies.get(LANG_COOKIE)
-    const frameworkLang = this.$q.lang.isoName
-
-    this.lang = savedLang || frameworkLang
-
     // populate language selector
     this.langOptions = appLanguages.map(langObj => ({
       label: langObj.nativeName, value: langObj.isoName
     }))
+
+    this.setInitialLang()
+  },
+  methods: {
+    isLangSupported (lang) {
+      return lang && this.appLanguageNames &&
+        this.appLanguageNames.includes(lang.toLowerCase())
+    },
+    setInitialLang () {
+      // find first supported language by candidate's priority
+      const candidateLangs = [
+        this.$q.cookies.get(LANG_COOKIE), // saved in cookie (must be first)
+        navigator && navigator.language, // browser's locale
+        this.$q.lang.isoName // quasar.conf.js's framework.lang field
+      ]
+      this.lang = candidateLangs.find(this.isLangSupported)
+    }
   }
 }
 </script>
