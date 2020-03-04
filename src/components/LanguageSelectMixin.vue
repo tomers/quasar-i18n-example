@@ -38,6 +38,10 @@ export default {
     }
   },
   watch: {
+    projectLang () {
+      // update when language is modified from outside
+      this.lang = this.projectLang
+    },
     lang () {
       // dynamic import, so loading on demand only
       import(
