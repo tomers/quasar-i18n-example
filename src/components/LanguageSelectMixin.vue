@@ -23,6 +23,18 @@ export default {
     },
     isLangValid () {
       return this.isLangSupported(this.lang)
+    },
+    savedLang () {
+      // last selected language in the app
+      return this.$q.cookies.get(LANG_COOKIE)
+    },
+    browserLang () {
+      // user's language preferences in the browser
+      return navigator && navigator.language
+    },
+    projectLang () {
+      // project's language (from framework.lang field in quasar.conf.js)
+      return this.$q.lang.isoName
     }
   },
   watch: {
@@ -57,9 +69,9 @@ export default {
     setInitialLang () {
       // find first supported language by candidate's priority
       const candidateLangs = [
-        this.$q.cookies.get(LANG_COOKIE), // saved in cookie (must be first)
-        navigator && navigator.language, // browser's locale
-        this.$q.lang.isoName // quasar.conf.js's framework.lang field
+        this.savedLang, // (must be first)
+        this.browserLang,
+        this.projectLang
       ]
       this.lang = candidateLangs.find(this.isLangSupported)
     }
