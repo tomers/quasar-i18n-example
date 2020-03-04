@@ -1,51 +1,59 @@
 <template>
-  <q-form
-    class="q-gutter-md"
-    @submit="onSubmit"
-    @reset="onReset"
-  >
-    <q-input
-      v-model="name"
-      :label="$t('yourName*')"
-      :hint="$t('nameAndSurname')"
-      filled
-      lazy-rules
-      :rules="[ val => val && val.length > 0 || $t('pleaseTypeSomething')]"
-    />
+  <q-card>
+    <q-form
+      class="q-gutter-md"
+      @submit="onSubmit"
+      @reset="onReset"
+    >
+      <q-card-section>
+        <q-input
+          v-model="name"
+          :label="$t('yourName*')"
+          :hint="$t('nameAndSurname')"
+          filled
+          lazy-rules
+          :rules="[ val => val && val.length > 0 || $t('pleaseTypeSomething')]"
+        />
+      </q-card-section>
 
-    <q-input
-      v-model="age"
-      :label="$t('yourAge*')"
-      filled
-      type="number"
-      lazy-rules
-      :rules="[
-        val => val !== null && val !== '' || $t('pleaseTypeYourAge'),
-        val => val > 0 && val < 100 || $t('pleaseTypeARealAge')
-      ]"
-    />
+      <q-card-section>
+        <q-input
+          v-model="age"
+          :label="$t('yourAge*')"
+          filled
+          type="number"
+          lazy-rules
+          :rules="[
+            val => val !== null && val !== '' || $t('pleaseTypeYourAge'),
+            val => val > 0 && val < 100 || $t('pleaseTypeARealAge')
+          ]"
+        />
+      </q-card-section>
 
-    <q-toggle
-      v-model="accept"
-      :label="$t('iAcceptTheLicenseAndTerms')"
-    />
+      <q-card-section>
+        <q-toggle
+          v-model="accept"
+          :label="$t('iAcceptTheLicenseAndTerms')"
+        />
+      </q-card-section>
 
-    <!-- https://quasar.dev/options/quasar-language-packs#Using-Quasar-Language-Pack-in-App-Space -->
-    <div>
-      <q-btn
-        :label="$q.lang.label.ok"
-        type="submit"
-        color="primary"
-      />
-      <q-btn
-        :label="$q.lang.label.clear"
-        type="reset"
-        color="primary"
-        flat
-        class="q-ml-sm"
-      />
-    </div>
-  </q-form>
+      <!-- https://quasar.dev/options/quasar-language-packs#Using-Quasar-Language-Pack-in-App-Space -->
+      <q-card-actions align="right">
+        <q-btn
+          :label="$q.lang.label.clear"
+          type="reset"
+          color="primary"
+          flat
+          class="q-ml-sm"
+        />
+        <q-btn
+          :label="$q.lang.label.ok"
+          type="submit"
+          color="primary"
+        />
+      </q-card-actions>
+    </q-form>
+  </q-card>
 </template>
 
 <script>
