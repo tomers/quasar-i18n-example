@@ -2,6 +2,8 @@
 
 An app for demonstration of i18n ([Internationalization and localization](https://en.wikipedia.org/wiki/Internationalization_and_localization)) in Quasar Framework.
 
+Please contribute more language translations!
+
 ## Demo
 [Demo app](http://quasar-i18.surge.sh/)
 
