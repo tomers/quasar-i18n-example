@@ -11,7 +11,7 @@
         <q-item
           v-for="(langOption, i) in langOptions"
           :key="`lang_${i}`"
-          :active="langOption.value === projectLang"
+          :active="langOption.value === lang"
           color="yellow"
           clickable
           @click="onLang(langOption.value)"
@@ -35,11 +35,6 @@
                 v-if="langOption.value === browserLang.toLowerCase()"
                 color="secondary"
                 label="Browser"
-              />
-              <q-badge
-                v-if="langOption.value === projectLang"
-                color="secondary"
-                label="Project conf"
               />
               <q-badge
                 v-if="langOption.value === 'ru'"
