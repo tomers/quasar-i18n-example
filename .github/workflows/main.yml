@@ -16,19 +16,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Install surge and fire deployment
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Install node
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install -g surge
-      # - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Install surge
+        run: npm install -g surge
+      - name: Install project
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Test project
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: test # will run `yarn test` command
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Deploy project
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: deploy # will run `yarn deploy` command
