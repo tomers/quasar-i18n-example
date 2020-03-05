@@ -4,6 +4,8 @@ An app for demonstration of i18n ([Internationalization and localization](https:
 
 Please contribute more language translations!
 
+![Building and deploying to surge](https://github.com/tomers/quasar-i18n-example/workflows/Building%20and%20deploying%20to%20surge/badge.svg)
+
 ## Demo
 [Demo app](http://quasar-i18-example.surge.sh/)
 
