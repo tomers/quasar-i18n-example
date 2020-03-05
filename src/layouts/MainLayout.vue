@@ -15,7 +15,7 @@
           {{ $t('quasarApp') }}
         </q-toolbar-title>
 
-        <language-select />
+        <language-select dark />
         <div class="q-ml-md">
           {{ $t('quasar') }} v{{ $q.version }}
         </div>
@@ -40,6 +40,12 @@
           :key="link.title"
           v-bind="link"
         />
+        <q-separator />
+        <q-item>
+          <q-item-section>
+            <language-select borderless />
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 

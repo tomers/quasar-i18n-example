@@ -2,9 +2,9 @@
   <q-select
     v-if="isLangValid"
     v-model="lang"
-    :options="langOptions"
+    v-bind="{options, dark, filled, outlined, borderless, standout,
+             hideBottomSpace, rounded, square, dense, itemAligned}"
     :options-dark="$q.dark.isActive"
-    dark
     aria-label="Language"
     emit-value
     map-options
@@ -22,14 +22,26 @@ export default {
   mixins: [
     LanguageSelectMixin
   ],
+  props: {
+    dark: Boolean,
+    filled: Boolean,
+    outlined: Boolean,
+    borderless: Boolean,
+    standout: Boolean,
+    hideBottomSpace: Boolean,
+    rounded: Boolean,
+    square: Boolean,
+    dense: Boolean,
+    itemAligned: Boolean
+  },
   data () {
     return {
-      langOptions: []
+      options: []
     }
   },
   created () {
     // populate language selector
-    this.langOptions = this.appLanguages && this.appLanguages.map(langObj => ({
+    this.options = this.appLanguages && this.appLanguages.map(langObj => ({
       label: langObj.nativeName, value: langObj.isoName
     }))
   }
