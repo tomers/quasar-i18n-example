@@ -11,6 +11,7 @@ Please contribute more language translations!
 - [Quasar Language Packs](https://quasar.dev/options/quasar-language-packs)
 - [App Internationalization (I18n)](https://quasar.dev/options/app-internationalization)
 - [RTL Support](https://quasar.dev/options/rtl-support)
+- [Best practice for presenting languages](http://www.flagsarenotlanguages.com/blog/best-practice-for-presenting-languages/)
 ## Install the dependencies
 ```bash
 yarn
