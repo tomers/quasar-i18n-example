@@ -5,7 +5,7 @@ An app for demonstration of i18n ([Internationalization and localization](https:
 Please contribute more language translations!
 
 ## Demo
-[Demo app](http://quasar-i18.surge.sh/)
+[Demo app](http://quasar-i18-example.surge.sh/)
 
 ## Relevant documentation
 - [Quasar Language Packs](https://quasar.dev/options/quasar-language-packs)

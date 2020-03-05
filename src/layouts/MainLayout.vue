@@ -89,9 +89,9 @@ export default {
         },
         {
           title: this.$t('demoSite'),
-          caption: 'https://quasar-i18.surge.sh',
-          icon: 'chat',
-          link: 'https://quasar-i18.surge.sh/'
+          caption: 'https://quasar-i18-example.surge.sh',
+          icon: 'open_in_browser',
+          link: 'https://quasar-i18-example.surge.sh/'
         }
       ]
     }
