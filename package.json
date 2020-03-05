@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
-    "deploy": "quasar build && surge ./dist/spa/ quasar-i18.surge.sh",
+    "deploy": "quasar build && surge ./dist/spa/ ${SURGE_DOMAIN} --token ${SURGE_TOKEN}",
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0"
   },
