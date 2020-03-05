@@ -9,6 +9,7 @@ if (availableLangs) {
     availableLangs.includes(lang.isoName)
   )
 }
+// Note that the order of languages is set according to index.json
 
 export default {
   data () {
