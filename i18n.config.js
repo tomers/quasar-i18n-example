@@ -1,5 +1,6 @@
 module.exports = {
   availableLangs: [
-    'he', 'en-us'
+    // Note: must also update magic comment at LanguageSelectMixin.vue
+    'he', 'en-us', 'ru'
   ]
 }

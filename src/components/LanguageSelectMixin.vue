@@ -45,7 +45,11 @@ export default {
     lang () {
       // dynamic import, so loading on demand only
       import(
-        /* webpackInclude: /(he|en-us)\.js$/ */
+        // Note: you must update the magic comment here with all supported
+        //       languages defined in i18n.config.js, in order for them to load
+        // Reference: https://webpack.js.org/api/module-methods/#magic-comments
+
+        /* webpackInclude: /(he|en-us|ru)\.js$/ */
         `quasar/lang/${this.lang}`
       )
         .then(lang => {
@@ -53,8 +57,9 @@ export default {
           this.$i18n.locale = lang.default.isoName
           this.$q.cookies.set(LANG_COOKIE, lang.default.isoName)
         })
-        .catch(() => {
+        .catch(error => {
           console.error(`Failed to load language ${this.lang}`)
+          console.dir(error)
           if (this.appLanguages) {
             // set to first available language
             this.lang = this.appLanguages[0].isoName
