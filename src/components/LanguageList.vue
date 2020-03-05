@@ -41,6 +41,11 @@
                 color="secondary"
                 label="Project conf"
               />
+              <q-badge
+                v-if="langOption.value === 'ru'"
+                color="warning"
+                label="Partial"
+              />
             </div>
           </q-item-section>
         </q-item>
