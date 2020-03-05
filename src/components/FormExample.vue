@@ -2,7 +2,7 @@
   <q-card>
     <q-card-section>
       <div class="text-h6">
-        Form Example
+        {{ $t('formExample') }}
       </div>
     </q-card-section>
 

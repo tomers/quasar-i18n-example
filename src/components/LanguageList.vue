@@ -2,7 +2,7 @@
   <q-card>
     <q-card-section>
       <div class="text-h6">
-        Languages
+        {{ $t('languages') }}
       </div>
     </q-card-section>
 

@@ -5,6 +5,7 @@ export default {
   quasar: 'Quasar',
   quasarApp: 'Quasar App',
   essentialLinks: 'Essential Links',
+  formExample: 'Form Example',
   'yourName*': 'Your name *',
   nameAndSurname: 'Name and surname',
   pleaseTypeSomething: 'Please type something',
@@ -14,6 +15,7 @@ export default {
   iAcceptTheLicenseAndTerms: 'I accept the license and terms',
   youNeedToAcceptTheLicenseAndTermsFirst: 'You need to accept the license and terms first',
   submitted: 'Submitted',
+  languages: 'Languages',
   framework: 'Framework',
   github: 'Github',
   demoSite: 'Demo Site'

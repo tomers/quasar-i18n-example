@@ -5,6 +5,7 @@ export default {
   quasar: 'קוואזר',
   quasarApp: 'אפליקציית קוואזר',
   essentialLinks: 'לינקים חיוניים',
+  formExample: 'טופס לדוגמה',
   'yourName*': 'שמך *',
   nameAndSurname: 'שם פרטי ושם משפחה',
   pleaseTypeSomething: 'הקלד ערך כלשהו',
@@ -14,6 +15,7 @@ export default {
   iAcceptTheLicenseAndTerms: 'אני מקבל את תנאי השימוש',
   youNeedToAcceptTheLicenseAndTermsFirst: 'תחילה עלייך לקבל את הרשיון ותנאי השימוש',
   submitted: 'נשלח',
+  languages: 'שפות',
   framework: 'פריימוורק',
   github: 'גיטהאב',
   demoSite: 'אתר הדגמה'
