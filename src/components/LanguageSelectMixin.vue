@@ -71,6 +71,7 @@ export default {
     },
     setLang (lang) {
       // dynamic import, so loading on demand only
+      lang = lang.toLowerCase()
       import(
         // Note: you must update the magic comment here with all supported
         //       languages defined in i18n.config.js, in order for them to load
