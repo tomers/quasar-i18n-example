@@ -26,7 +26,7 @@ export default {
     },
     savedLang () {
       // last selected language in the app
-      return this.$q.cookies.get(LANG_COOKIE)
+      return this.$q.cookies && this.$q.cookies.get(LANG_COOKIE)
     },
     browserLang () {
       // user's language preferences in the browser
@@ -50,6 +50,9 @@ export default {
     }
   },
   created () {
+    if (!this.$q.cookies) {
+      console.warn('Consider enabling the Cookies plugin for language selection persistency')
+    }
     this.setInitialLang()
   },
   methods: {
@@ -79,7 +82,8 @@ export default {
         .then(langObj => {
           this.$q.lang.set(langObj.default)
           this.$i18n.locale = langObj.default.isoName
-          this.$q.cookies.set(LANG_COOKIE, langObj.default.isoName)
+          this.$q.cookies &&
+            this.$q.cookies.set(LANG_COOKIE, langObj.default.isoName)
         })
         .catch(error => {
           console.error(`Failed to load language ${lang}`)
