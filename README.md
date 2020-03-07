@@ -14,6 +14,35 @@ Please contribute more language translations!
 - [App Internationalization (I18n)](https://quasar.dev/options/app-internationalization)
 - [RTL Support](https://quasar.dev/options/rtl-support)
 - [Best practice for presenting languages](http://www.flagsarenotlanguages.com/blog/best-practice-for-presenting-languages/)
+- [International and multilingual sites](https://support.google.com/webmasters/topic/2370587)
+
+## Integration with existing project
+- Add Vue-i18n support
+
+  Follow [Quasar's App Internationalization documentation](https://quasar.dev/options/app-internationalization). TL;DR:
+  - Setup i18n
+  - Build default translation file
+    * Create default translation file, `src/i18n/en-us` (rename according to your project's default local, as defined in `quasar.conf.js`, in `framework.lang field`)
+  - Replace existing strings with $t() macros
+
+- Copy the `i18n.config.js` file to your project and configure it to your preferences
+
+- Set default project language in `quasar.conf.js`
+
+- Optionally: Enable the [Cookies plugin](https://quasar.dev/quasar-plugins/cookies#Installation), for persistency of language selection
+
+- Add language selection logic
+
+  - If you plan to use the LanguageSelect component:
+    - Copy the `LanguageSelectMixin.vue` and `LanguageSelect.vue` files to your project
+    - Add the select component anywhere in your layout
+
+  - Otherwise:
+    - Copy the `LanguageSelectMixin.vue` file to your project
+    - Use the mixin in your layout
+
+- Edit the `webpackInclude` comment in `LanguageSelectMixin.vue` according to your desired languages
+
 ## Install the dependencies
 ```bash
 yarn
